@@ -4,7 +4,7 @@
 #include <iostream>
 
 struct Node {
-    int key = 0;
+    int   key = 0;
     Node* next = this;
 };
 

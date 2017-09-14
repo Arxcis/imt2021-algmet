@@ -76,7 +76,7 @@ void traverseTree(Node* root) {
     Stack* const stack = new Stack{};
     Node* t = nullptr;
     push(stack, root);
-    std::cout << "FASIT.....\n";
+    std::cout << "\n-------- FASIT ------- \n";
     while(!isEmpty(stack)) {
         t = pop(stack);
         std::cout << t->key << '\n';

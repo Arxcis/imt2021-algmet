@@ -44,7 +44,7 @@ Node* pop(Stack* stack) {
 }
 
 
-Node* buildTree(const char* postfixstring) {
+Node* buildPostfix(const char* postfixstring) {
     Stack* const stack = new Stack{};
 
     for (size_t i = 0; i < strlen(postfixstring); ++i) {
@@ -89,7 +89,7 @@ void traverseTree(Node* root) {
 }
 
 int main () {    
-    Node* root = buildTree("598+46**7+*");
+    Node* root = buildPostfix("598+46**7+*");
     
     traverseTree(root);
 

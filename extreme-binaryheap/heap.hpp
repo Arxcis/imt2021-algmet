@@ -8,21 +8,21 @@
 //   - bottom min. aka maxheap
 
 #include <cstdlib>
-#include <stdint.h>
+#include <cstdint>
 #include <cassert>
 #include <cstring>
 #include <cstdio>
 
 namespace Heap 
 {
-using i32 = int32_t;
-using u32 = uint32_t;
+using i32 = std::int32_t;
+using u32 = std::uint32_t;
 template<class Type> struct BinaryHeap;
 
 namespace details 
 {
     const u32 START_CAPACITY = 64;
-    template<class Type, class Func> void upHeap(BinaryHeap<Type>& bh, Func& compare);  
+    template<class Type, class Func> void upHeap(BinaryHeap<Type>& bh, const Func& compare);  
     template<class Type, class Func> void downHeap(BinaryHeap<Type>& bh, const Func& compare);
 }
 
@@ -133,7 +133,6 @@ namespace details
         bh.items[a] = bh.items[b];
         bh.items[b] = temp;
     }
-
 
 } // END OF namespace details
 } // END OF namespace Heap
